@@ -6,6 +6,7 @@ int matrixScore(vector<vector<int>>& grid) {
     int rows = grid.size();
     int cols = grid[0].size();
 
+    // Flip the Rows
     for(int i = 0; i < rows; i++){
         if(grid[i][0] == 0){
             for(int j = 0; j < cols; j++){
