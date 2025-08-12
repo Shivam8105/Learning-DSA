@@ -31,3 +31,4 @@ int main(){
     int sum = beautySum(s);
     cout << sum << endl;
 }
+
