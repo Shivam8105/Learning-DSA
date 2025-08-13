@@ -18,9 +18,18 @@ int print(int num,int n){
     return print(num + 1, n);
 }
 
+void print_2(int n){
+    if(n == 0) return;
+    print_2(n - 1);
+    cout << n << endl;
+}
+
 int main(){
     cout << hello(5);
     cout << endl;
     cout << endl;
     cout << print(1,5);
+    cout << endl;
+    cout << endl;
+    print_2(5);
 }
