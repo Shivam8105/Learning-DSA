@@ -7,5 +7,5 @@ int fib(int n){
 }
 
 int main(){
-    cout << fib(10) << endl;
+    cout << fib(5) << endl;
 }
