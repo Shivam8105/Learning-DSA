@@ -17,9 +17,6 @@ pwc++/
 ├── Strings/ # String related problems
 └── Readme.md # Project documentation
 
-yaml
-Copy code
-
 ---
 
 ## 📌 Topics Covered So Far
