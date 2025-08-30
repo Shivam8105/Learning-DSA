@@ -7,15 +7,15 @@ It serves as my learning log and practice collection while building a strong fou
 
 ## 📂 Repository Structure
 pwc++/
-├── 2dArrays/ # Problems and implementations on 2D Arrays
-├── A2Z/ # A2Z DSA Sheet practice
-│ ├── arrays/
-│ └── strings/
-├── Arrays and Vectors/ # Array and Vector based problems
-├── hashing/ # Hashing based problems
-├── recursion/ # Recursive solutions
-├── Strings/ # String related problems
-└── Readme.md # Project documentation
+├── 2dArrays/ # Problems and implementations on 2D Arrays \n
+├── A2Z/ # A2Z DSA Sheet practice \n
+│ ├── arrays/ \n
+│ └── strings/ \n
+├── Arrays and Vectors/ # Array and Vector based problems \n
+├── hashing/ # Hashing based problems \n
+├── recursion/ # Recursive solutions \n
+├── Strings/ # String related problems \n
+└── Readme.md # Project documentation \n
 
 ---
 
