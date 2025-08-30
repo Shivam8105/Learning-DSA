@@ -11,7 +11,6 @@ pwc++/
 ├── A2Z/                       
 │   ├── arrays/
 │   └── strings/
----
 ├── Arrays and Vectors/        
 ├── hashing/                  
 ├── recursion/                
