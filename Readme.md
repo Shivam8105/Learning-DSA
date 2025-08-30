@@ -17,8 +17,6 @@ pwc++/
 ├── Strings/                   # String related problems
 └── Readme.md                  # Project documentation
 
-
-
 ---
 
 ## 📌 Topics Covered So Far
@@ -76,5 +74,3 @@ Editor: Visual Studio Code
 This repo is mainly for self-practice and revision.
 Contributions are not expected, but suggestions are always welcome!
 
-yaml
-Copy code
