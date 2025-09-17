@@ -11,11 +11,11 @@ int lowerBound(int arr[], int n, int x){
         else if(arr[mid] < x) low = mid + 1;
         else if(arr[mid] > x) high = mid - 1;
     }
-    return -1;
+    return arr[high];
 }
 
 int main(){
     int arr[14] = {1,2,3,4,5,6,7,8,9,12,14,15,17,19};
-    int ans = lowerBound(arr,14,17);
+    int ans = lowerBound(arr,14,11);
     cout << ans << endl;
 }
