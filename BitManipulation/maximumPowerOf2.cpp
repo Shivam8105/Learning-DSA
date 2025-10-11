@@ -4,7 +4,6 @@ using namespace std;
 int main(){
     int n;
     cin >> n;
-
     int temp;
     while(n != 0){
         temp = n;
@@ -12,3 +11,4 @@ int main(){
     }
     cout << temp << endl;
 }
+
