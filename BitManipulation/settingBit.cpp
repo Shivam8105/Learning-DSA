@@ -9,3 +9,4 @@ int main(){
     n = n | (1 << i);
     cout << n << endl;
 }
+
