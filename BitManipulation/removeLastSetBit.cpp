@@ -7,3 +7,5 @@ int main(){
     int x = n & n - 1;
     cout << x << endl;
 }
+
+
