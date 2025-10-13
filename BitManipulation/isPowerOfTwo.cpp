@@ -34,16 +34,23 @@ using namespace std;
 //     }
 // }
 
+// int main(){
+//     int n;
+//     cin >> n;
+//     int cnt = 0;
+
+//     while(n > 1){
+//         cnt += n & 1;
+//         n = n >> 1;
+//     }
+//     if(n == 1) cnt++;
+//     if(cnt > 1) cout << "false" << endl;
+//     else cout << "true" << endl;
+// }
+
 int main(){
     int n;
     cin >> n;
-    int cnt = 0;
-
-    while(n > 1){
-        cnt += n & 1;
-        n = n >> 1;
-    }
-    if(n == 1) cnt++;
-    if(cnt > 1) cout << "false" << endl;
-    else cout << "true" << endl;
+    int x = __builtin_popcount(n);
+    cout << x << endl;
 }
