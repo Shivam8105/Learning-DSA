@@ -22,3 +22,4 @@ int main(){
     change(arr,size);
     display(arr,size);
 }
+
