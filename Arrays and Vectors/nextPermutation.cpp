@@ -61,3 +61,4 @@ int main(){
     nextPermutation(nums);
     display(nums);
 }
+
