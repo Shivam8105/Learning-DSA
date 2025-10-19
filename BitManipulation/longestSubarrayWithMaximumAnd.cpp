@@ -19,6 +19,8 @@ int main(){
             count = 1;
         }else if(nums[i] == max_el){
             count++;
+        }else{
+            count = 0;
         }
         ans = max(ans,count);
     }
