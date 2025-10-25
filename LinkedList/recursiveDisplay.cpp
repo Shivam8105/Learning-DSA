@@ -14,8 +14,8 @@ public:
 void displayRecursive(Node* head) {
     if (head == NULL)
         return;
-    cout << head->data << " ";
-    displayRecursive(head->next);
+        displayRecursive(head->next);
+        cout << head->data << " ";
 }
 
 int main() {
