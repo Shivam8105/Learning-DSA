@@ -41,6 +41,7 @@ void insertAtPos(Node* &head, int pos,int data){
         }
         newNode -> next = head;
         head = newNode;
+        return;
     }
     Node* temp = head;
     int count = 1;
@@ -54,6 +55,30 @@ void insertAtPos(Node* &head, int pos,int data){
     }
     newNode -> next = temp -> next;
     temp -> next = newNode;
+}
+
+int getElement(Node* &head, int pos){
+    if(pos < 1) return -1;
+    if(pos == 1){
+        return head -> data;
+    }
+    int count = 0;
+    Node* temp = head;
+    while(temp != NULL){
+        count++;
+        temp = temp -> next;
+    }
+    if(pos > count){
+        return -1;
+    }
+    int cnt = 1;
+    Node* curr = head;
+    while(cnt < pos){
+        curr = curr -> next;
+        cnt++;
+    }
+    return curr -> data;
+
 }
 
 void display(Node* head){
@@ -82,7 +107,9 @@ int main(){
     insertAtEnd(head,tail,30);
     insertAtEnd(head,tail,40);
     insertAtEnd(head,tail,50);
-    insertAtPos(head,6,23);
+    insertAtPos(head,1,23);
     insertAtBeginning(head,5);
     display(head);
+    int ans = getElement(head,2);
+    cout << ans << endl;
 }
