@@ -45,6 +45,24 @@ void deleteLast(Node* &head){
     temp -> next = NULL;
 }
 
+void deletePos(Node* &head, int pos){
+    if(head == NULL){
+        cout << "List is empty" << endl;
+        return;
+    }
+    Node* temp = head;
+    Node* prev = NULL;
+    int count = 1;
+    while(count < pos - 1 && temp != NULL){
+        prev = temp;
+        temp = temp -> next;
+        count++;
+    }
+    prev -> next = temp -> next;
+    temp -> next = NULL;
+    delete temp;
+}
+
 void display(Node* head){
     if(head == NULL){
         cout << "List is empty" << endl;
