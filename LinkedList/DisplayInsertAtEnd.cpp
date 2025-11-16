@@ -34,7 +34,26 @@ void insertAtBeginning(Node* &head,int data){
 
 void insertAtPos(Node* &head, int pos,int data){
     Node* newNode = new Node(data);
-    
+    if(pos == 1){
+        if(head == NULL){
+            head = newNode;
+            return;
+        }
+        newNode -> next = head;
+        head = newNode;
+    }
+    Node* temp = head;
+    int count = 1;
+    while(count < pos - 1 && temp != NULL){
+        temp = temp -> next;
+        count++;
+    }
+    if(temp == NULL){
+        cout << "Position is out of range" << endl;
+        return;
+    }
+    newNode -> next = temp -> next;
+    temp -> next = newNode;
 }
 
 void display(Node* head){
@@ -63,6 +82,7 @@ int main(){
     insertAtEnd(head,tail,30);
     insertAtEnd(head,tail,40);
     insertAtEnd(head,tail,50);
+    insertAtPos(head,6,23);
     insertAtBeginning(head,5);
     display(head);
 }
