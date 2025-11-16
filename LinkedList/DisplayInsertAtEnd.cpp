@@ -32,10 +32,10 @@ void insertAtBeginning(Node* &head,int data){
     head = newNode;
 }
 
-// void insertAtPos(Node* &head, int pos,int data){
-//     Node* newNode = new Node(data);
-
-// }
+void insertAtPos(Node* &head, int pos,int data){
+    Node* newNode = new Node(data);
+    
+}
 
 void display(Node* head){
     Node* temp = head;
