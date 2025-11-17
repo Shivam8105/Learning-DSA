@@ -59,7 +59,7 @@ void deletePos(Node* &head, int pos){
     }
     Node* temp = head;
     Node* prev = NULL;
-    while(count < pos - 1 && temp != NULL){
+    while(count < pos && temp != NULL){
         prev = temp;
         temp = temp -> next;
         count++;
