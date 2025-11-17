@@ -50,17 +50,26 @@ void deletePos(Node* &head, int pos){
         cout << "List is empty" << endl;
         return;
     }
+    int count = 1;
+    if(pos == 1){
+        Node* curr = head;
+        head = head -> next;
+        delete curr;
+        return;
+    }
     Node* temp = head;
     Node* prev = NULL;
-    int count = 1;
     while(count < pos - 1 && temp != NULL){
         prev = temp;
         temp = temp -> next;
         count++;
     }
+    if(temp == NULL){
+        cout << "Position is out of Range";
+        return;
+    }
     prev -> next = temp -> next;
     temp -> next = NULL;
-    delete temp;
 }
 
 void display(Node* head){
@@ -88,5 +97,7 @@ int main(){
     deleteHead(head);
     display(head);
     deleteLast(head);
+    display(head);
+    deletePos(head,2);
     display(head);
 }
