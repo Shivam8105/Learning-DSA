@@ -1,19 +1,19 @@
 #include <iostream>
 using namespace std;
 
-int fib(int n){
+long long fib(long long n){
     if(n == 0){
         return 0;
     }
     else if(n == 1){
-        return 1;
+        return 0;
     }
     return fib(n - 1) + fib(n - 2);
 }
 
 int main(){
-    int n;
+    long long n;
     cin >> n;
-    int ans = fib(n);
+    long long ans = fib(n);
     cout << ans << endl;
 }
