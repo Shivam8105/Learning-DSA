@@ -24,5 +24,5 @@ void insertAtHead(Node* &head, int data){
 void deleteNode(Node* )
 
 int main(){
-
+    
 }
