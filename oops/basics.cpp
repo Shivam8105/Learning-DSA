@@ -13,7 +13,18 @@ public:
         rno = r;
         gpa = g;
     }
+    Student(string s,int r){
+        name  = s;
+        rno = r;
+    }
+    Student(){
+
+    }
 };
+
+void change(Student &s){
+    s.name = "Didu";
+}
 
 void print(Student c){
     cout << " " << c.name << " " << c.rno << " " <<  c.gpa << endl;
@@ -27,8 +38,30 @@ int main(){
     // s.rno = 24;
     // s.gpa = 8.43;
 
-    print(s);
+    // print(s);
 
     // cout << s.name << " " << s.rno << " " << s.gpa << " " << endl;
+
+    Student s1("Shivam Kumar",23);
+    s1.gpa = 4.5;
+    // print(s1);
+
+    Student s2;
+    s2.name = "Vyakhya Namdev";
+    s2.gpa = 8.4;
+    s2.rno = 34;
+
+    Student s6 = s1;
+    s6.name = "Gadhi";
+
+    print(s1);
+    change(s1);
+    // print(s1);
+
+    Student s7(s1);
+    s7.name = "pagli";
+    print(s7);
+
+    // print(s6);
 
 }
