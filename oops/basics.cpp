@@ -46,10 +46,10 @@ int main(){
     s1.gpa = 4.5;
     // print(s1);
 
-    Student s2;
-    s2.name = "Vyakhya Namdev";
-    s2.gpa = 8.4;
-    s2.rno = 34;
+    // Student s2;
+    // s2.name = "Vyakhya Namdev";
+    // s2.gpa = 8.4;
+    // s2.rno = 34;
 
     Student s6 = s1; // deep copy
     s6.name = "Gadhi";
@@ -61,6 +61,11 @@ int main(){
     Student s7(s1);
     s7.name = "pagli";
     print(s7);
+
+    Student s2;
+    s2 = s1;
+    print(s2);
+
 
     // print(s6);
 
