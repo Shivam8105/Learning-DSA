@@ -37,7 +37,6 @@ public:
     }
 };
 
-
 int main(){
     Cricketer c1("Virat Kohli",25000,55.2);
     Cricketer c2("Rohit Sharma",18000,47.2);
