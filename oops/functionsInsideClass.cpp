@@ -46,6 +46,4 @@ int main(){
 
     cout << c1.matches() << endl;
     cout << c2.matches() << endl;
-
-
 }
