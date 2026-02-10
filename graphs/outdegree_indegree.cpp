@@ -2,20 +2,41 @@
 #include <vector>
 
 using namespace std;
+//! method - 1 : adjacency list
+// void inOut(int n,vector<vector<int>>& adj){
+//     vector<int> indegree(n + 1,0);
+//     vector<int> outdegree(n + 1,0);
+
+//     for(int u = 1; u <= n; u++){
+//         outdegree[u] = adj[u].size();
+//         for(int v : adj[u]){
+//             indegree[v]++;
+//         }
+//     }
+
+//     for(int i = 1; i <= n; i++){
+//         cout << "Node " << i << " Outdegree = " << outdegree[i] << " Indegree = " << indegree[i] << endl;
+//     }
+// }
+
+//! method - 2 : adjacency matrix
 
 void inOut(int n,vector<vector<int>>& adj){
-    vector<int> indegree(n + 1,0);
-    vector<int> outdegree(n + 1,0);
+    vector<int> indegree(n,0);
+    vector<int> outdegree(n,0);
 
-    for(int u = 1; u <= n; u++){
-        outdegree[u] = adj[u].size();
-        for(int v : adj[u]){
-            indegree[v]++;
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            if(adj[i][j] == 1){
+                indegree[j]++;
+                outdegree[i]++;
+            }
         }
     }
-
-    for(int i = 1; i <= n; i++){
-        cout << "Node " << i << " Outdegree = " << outdegree[i] << " Indegree = " << indegree[i] << endl;
+    for(int i = 0; i < n; i++){
+        cout << "Node " << i
+             << " Outdegree = " << outdegree[i]
+             << " Indegree = " << indegree[i] << endl;
     }
 }
 
