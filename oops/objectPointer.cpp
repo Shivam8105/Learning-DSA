@@ -34,13 +34,13 @@ public:
 };
 
 int main(){
-    // int x = 4;
-    // cout << &x << endl;
+    int x = 4;
+    cout << &x << endl;
 
-    // int *p = &x;
-    // cout << p << endl;
+    int *p = &x;
+    cout << p << endl;
 
-    // cout << *p << endl;
+    cout << *p << endl;
 
     // *p = 100;
     // cout << *p << endl;
@@ -48,12 +48,12 @@ int main(){
 
     Cricketer c1("Virat Kohli",25000,55.2);
     Cricketer c2("Rohit Sharma",18000,47.2);
-    c2.print();
-    c1.print();
+    // c2.print();
+    // c1.print();
 
     Cricketer* c3 = new Cricketer("MS Dhoni",26000,55.7);
 
-    cout << (*c3).name << " " << (*c3).runs << " " << (*c3).avg << " " << endl;
+    // cout << (*c3).name << " " << (*c3).runs << " " << (*c3).avg << " " << endl;
 
-    cout << c3 -> name << " " << c3->runs << " " << c3 ->avg << " " << endl;
+    // cout << c3 -> name << " " << c3->runs << " " << c3 ->avg << " " << endl;
 }
