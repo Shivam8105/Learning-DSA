@@ -1,14 +1,10 @@
 #include <iostream>
+#include <queue>
 #include <vector>
 
 using namespace std;
 
-
-//! dfs solution
-
-
-// class Solution {
-// public:
+//! dfs
 
 // void dfs(int room,vector<vector<int>>& rooms, vector<bool>& visited){
 //     visited[room] = true;
@@ -31,14 +27,8 @@ using namespace std;
 //         }
 //         return true;
 //     }
-// };
 
-//! bfs solution
-
-class Solution {
-public:
-
-void bfs(int node, vector<vector<int>>& rooms,vector<bool>& visited){
+void bfs(int node, vector<vector<int>>& rooms, vector<bool>& visited){
     queue<int> q;
     q.push(node);
     visited[node] = true;
@@ -49,21 +39,44 @@ void bfs(int node, vector<vector<int>>& rooms,vector<bool>& visited){
 
         for(int neighbour : rooms[front]){
             if(!visited[neighbour]){
-                q.push(neighbour);
                 visited[neighbour] = true;
+                q.push(neighbour);
             }
         }
     }
 }
-    bool canVisitAllRooms(vector<vector<int>>& rooms) {
-        int n = rooms.size();
 
-        vector<bool> visited(n,false);
+bool canVisitAllRooms(vector<vector<int>>& rooms) {
+    int n = rooms.size();
+    vector<bool> visited(n, false);
 
-        bfs(0,rooms,visited);
-        for(bool v : visited){
-            if(!v) return false;
-        }
-        return true;
+    bfs(0, rooms, visited);
+
+    for(bool v : visited){
+        if(!v) return false;
     }
-};
+    return true;
+}
+
+int main(){
+    int n;
+    cin >> n;
+
+    vector<vector<int>> rooms(n);
+
+    for(int i = 0; i < n; i++){
+        int k;              
+        cin >> k;
+        rooms[i].resize(k);
+        for(int j = 0; j < k; j++){
+            cin >> rooms[i][j];
+        }
+    }
+
+    if(canVisitAllRooms(rooms))
+        cout << "true\n";
+    else
+        cout << "false\n";
+
+    return 0;
+}
