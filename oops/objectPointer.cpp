@@ -53,7 +53,9 @@ int main(){
 
     Cricketer* c3 = new Cricketer("MS Dhoni",26000,55.7);
 
-    // cout << (*c3).name << " " << (*c3).runs << " " << (*c3).avg << " " << endl;
+    cout << (*c3).name << " " << (*c3).runs << " " << (*c3).avg << " " << endl;
 
-    // cout << c3 -> name << " " << c3->runs << " " << c3 ->avg << " " << endl;
+    cout << c3 -> name << " " << c3->runs << " " << c3 ->avg << " " << endl;
+
+    c3 -> print();
 }
