@@ -37,7 +37,7 @@ public:
             cout << "Array is Empty" << endl;
             return -1;
         }
-        if(idx > size){
+        if(idx > size || idx < 0){
             cout << "Invalid index";
         }
         return arr[idx];
