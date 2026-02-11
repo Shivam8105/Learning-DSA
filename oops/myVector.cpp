@@ -38,14 +38,14 @@ int main(){
     Vector v;
     v.add(10);
     v.print();
-    cout << v.size << endl;;
+    cout << v.size << " " << v.capacity << endl; 
     v.add(20);
     v.print();
-    cout << v.size << endl;
+    cout << v.size << " " << v.capacity << endl; 
     v.add(30);
     v.print();
-    cout << v.size << endl;
+    cout << v.size << " " << v.capacity << endl; 
     v.add(40);
     v.print();
-    cout << v.size << endl;
+    cout << v.size << " " << v.capacity << endl; 
 }
