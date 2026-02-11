@@ -32,6 +32,17 @@ public:
         cout << endl;
     }
 
+    int get(int idx){
+        if(size == 0){
+            cout << "Array is Empty" << endl;
+            return -1;
+        }
+        if(idx > size){
+            cout << "Invalid index";
+        }
+        return arr[idx];
+    }
+
 };
 
 int main(){
