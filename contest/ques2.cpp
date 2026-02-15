@@ -14,7 +14,7 @@ int main() {
             cin >> arr[i];
         }
         bool possible = true;
-        
+
         for(int i = 1; i <= n; i++) {
             int x = i;
             int y = arr[i];
@@ -32,7 +32,6 @@ int main() {
                 break;
             }
         }
-
         if(possible)
             cout << "YES\n";
         else
