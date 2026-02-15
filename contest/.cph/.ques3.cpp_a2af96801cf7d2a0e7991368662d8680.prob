@@ -1,0 +1,1 @@
+{"name":"Local: ques3","url":"/Users/shivamkumar/Desktop/coding/pwc++/contest/ques3.cpp","tests":[{"id":1771170221039,"input":"3\n3\n1 4 2\n4\n3 4 6 3\n10\n6 1 4 3 1 3 2 5 4 4","output":"0\n1\n4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/shivamkumar/Desktop/coding/pwc++/contest/ques3.cpp","group":"local","local":true}
