@@ -17,5 +17,5 @@ private:
 
 int main(){
     Student s1(76,"Shivam",92.2);
-    cout << s1.rno << " " << s1.name << " " << s1.marks << " " << endl;
+    cout << s1.rno << " " << s1.name << " " << endl;
 }
