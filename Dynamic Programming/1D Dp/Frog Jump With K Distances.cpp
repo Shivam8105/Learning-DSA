@@ -1,10 +1,14 @@
 #include <iostream>
 #include <vector>
+#include <climits>
 
 using namespace std;
 
+vector<int> dp;
 int solve(int i, int k,vector<int>& heights){
     if(i == 0) return 0;
+
+    if(dp[i] != -1) return dp[i];
 
     int ans = INT_MAX;
     for(int j = 1; j <= k; j++){
@@ -13,12 +17,14 @@ int solve(int i, int k,vector<int>& heights){
             ans = min(ans,cost1);
         }
     }
-    return ans;
+    return dp[i] = ans;
 }
 
 int main(){
     int n,k;
     cin >> n >> k;
+
+    dp.assign(n,-1);
 
     vector<int> heights(n);
 
