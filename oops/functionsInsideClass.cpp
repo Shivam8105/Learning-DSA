@@ -15,7 +15,7 @@ public:
     //     runs = r;
     // }
 
-    //! this operator signifies that it actally points to the data members of the class when an object is calling any function. // basically it points  to the current object.
+    //! this operator signifies that it actally points to the data members of the class when an object is calling any function. // basically it points to the current object.
 
     Cricketer(string name,int runs, float avg){
         this -> name = name;

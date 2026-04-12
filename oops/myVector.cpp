@@ -54,6 +54,7 @@ public:
 
 int main(){
     Vector v;
+    cout << v.size << " " << v.capacity << endl; 
     v.add(10);
     v.print();
     cout << v.size << " " << v.capacity << endl; 
