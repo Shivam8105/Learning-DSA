@@ -40,8 +40,14 @@ string longestPalindrome(string s)
     return ans;
 }
 
+// Optimal
+
+
+
 int main()
 {
-    int n;
-    cin >> n;
+    string s;
+    cin >> s;
+    cout << longestPalindrome(s) << endl;
 }
+
