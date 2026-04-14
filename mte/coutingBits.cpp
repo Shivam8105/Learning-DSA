@@ -37,6 +37,7 @@ int bit(int i){
 int main(){
     int n;
     cin >> n;
+    
 
     vector<int> ans;
 
