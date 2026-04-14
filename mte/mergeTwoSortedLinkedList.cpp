@@ -1,45 +1,5 @@
-// Merge two sorted linked lists into one sorted list
-
 #include <iostream>
 using namespace std;
-
-// dummy node approach
-
-class Solution {
-public:
-    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
-        ListNode* dummy = new ListNode(-1);
-        ListNode* temp = dummy;
-
-        while(list1 != nullptr && list2 != nullptr){
-            if(list1 -> val <= list2 -> val){
-                temp -> next = list1;
-                list1 = list1 -> next;
-            }else{
-                temp -> next = list2;
-                list2 = list2 -> next;
-            }
-            temp = temp -> next;
-        }
-
-        while(list1 != nullptr){
-            temp -> next = list1;
-            list1 = list1 -> next;
-            temp = temp -> next;
-        }
-
-        while(list2 != nullptr){
-            temp -> next = list2;
-            list2 = list2 -> next;
-            temp = temp -> next;
-        }
-
-        return dummy -> next;
-    }
-};
-
-// without dummy node approach
-
 
 struct Node {
     int data;
@@ -51,13 +11,35 @@ struct Node {
     }
 };
 
-Node* mergeLists(Node* l1, Node* l2) {
+// 🔹 Merge using dummy node
+Node* mergeWithDummy(Node* l1, Node* l2) {
+    Node* dummy = new Node(-1);
+    Node* temp = dummy;
+
+    while(l1 != NULL && l2 != NULL) {
+        if(l1->data <= l2->data) {
+            temp->next = l1;
+            l1 = l1->next;
+        } else {
+            temp->next = l2;
+            l2 = l2->next;
+        }
+        temp = temp->next;
+    }
+
+    if(l1) temp->next = l1;
+    else temp->next = l2;
+
+    return dummy->next;
+}
+
+// 🔹 Merge without dummy node
+Node* mergeWithoutDummy(Node* l1, Node* l2) {
     if(l1 == NULL) return l2;
     if(l2 == NULL) return l1;
 
     Node* head;
 
-    // choose first node
     if(l1->data <= l2->data) {
         head = l1;
         l1 = l1->next;
@@ -79,17 +61,57 @@ Node* mergeLists(Node* l1, Node* l2) {
         temp = temp->next;
     }
 
-    // attach remaining
-    if(l1 != NULL) temp->next = l1;
+    if(l1) temp->next = l1;
     else temp->next = l2;
 
     return head;
 }
 
+// 🔹 Helper: create list
+Node* createList(int n) {
+    Node* head = NULL;
+    Node* tail = NULL;
 
-int main(){
-    int n;
-    cin >> n;
+    for(int i = 0; i < n; i++) {
+        int x;
+        cin >> x;
 
+        Node* newNode = new Node(x);
 
+        if(head == NULL) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            tail->next = newNode;
+            tail = newNode;
+        }
+    }
+    return head;
+}
+
+// 🔹 Helper: print list
+void printList(Node* head) {
+    while(head != NULL) {
+        cout << head->data << " ";
+        head = head->next;
+    }
+    cout << endl;
+}
+
+int main() {
+    int n1, n2;
+
+    cin >> n1;
+    Node* list1 = createList(n1);
+
+    cin >> n2;
+    Node* list2 = createList(n2);
+
+    // choose one:
+    Node* merged = mergeWithDummy(list1, list2);
+    // Node* merged = mergeWithoutDummy(list1, list2);
+
+    printList(merged);
+
+    return 0;
 }
