@@ -33,7 +33,6 @@ int bit(int i){
     return count;
 }
 
-
 int main(){
     int n;
     cin >> n;
