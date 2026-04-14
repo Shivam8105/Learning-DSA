@@ -15,6 +15,7 @@ int main(){
     for(int i = 0; i < n; i++){
         cin >> arr[i];
     }
+    
 
     int sum = accumulate(arr.begin(),arr.end(),0);
     int leftSum = 0;
