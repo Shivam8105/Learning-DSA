@@ -1,7 +1,44 @@
 #include <iostream>
 using namespace std;
 
+int largestRectangleArea(vector<int>& heights) {
+        int n = heights.size();
+        vector<int> left(n);
+        vector<int> right(n);
+        stack<int> st;
 
+        // right smaller element
+        for(int i = n - 1; i >= 0; i--){
+            while(st.size() > 0 && heights[st.top()] >= heights[i]){
+                st.pop();
+            }
+
+            right[i] = st.empty() ? n : st.top();
+            st.push(i);
+        }
+
+        while(!st.empty()){
+            st.pop();
+        }
+
+        // left smaller element
+        for(int i = 0; i < n; i++){
+            while(st.size() > 0 && heights[st.top()] >= heights[i]){
+                st.pop();
+            }
+            left[i] = st.empty() ? -1 : st.top();
+            st.push(i);
+        }
+
+        int ans = 0;
+        for(int i = 0; i < n; i++){
+            int width = right[i] - left[i] - 1;
+            int area = heights[i] * width;
+            ans = max(area,ans);
+        }
+        return ans;
+
+    }
 
 int main(){
 
