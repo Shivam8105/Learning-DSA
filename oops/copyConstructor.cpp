@@ -35,3 +35,4 @@ int main(){
     cout << s2.rno << " " << s2.name << " " << *s2.age << endl; // shallow copy
     cout << s1.rno << " " << s1.name << " " << *s1.age << endl;
 }
+
