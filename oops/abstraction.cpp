@@ -48,11 +48,11 @@ public:
 };
 
 int main(){
-    // Shape* s = new Circle;
-    Shape* s;
-    Circle c;
-    Rectangle r;
-    s = &c;
-    s = &r;
+    Shape* s = new Circle;
+    // Shape* s;
+    // Circle c;
+    // Rectangle r;
+    // s = &c;
+    // s = &r;
     s -> draw();
 }
