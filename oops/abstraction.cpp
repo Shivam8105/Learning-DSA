@@ -29,6 +29,7 @@ using namespace std;
 
 class Shape{
 public:
+    // pure virtual functions
     virtual void draw() = 0;
 };
 
