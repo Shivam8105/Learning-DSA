@@ -3,8 +3,8 @@ using namespace std;
 
 class Number {
 public:
-    int x;
-    Number(int val) {
+    string x;
+    Number(string val) {
         x = val;
     }
 
@@ -15,8 +15,8 @@ public:
 };
 
 int main() {
-    Number n1(10);
-    Number n2(20);
+    Number n1("shivam ");
+    Number n2("kumar");
 
     Number n3 = n1 + n2;
 
