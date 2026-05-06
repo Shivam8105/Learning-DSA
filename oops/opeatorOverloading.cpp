@@ -4,7 +4,6 @@ using namespace std;
 class Number {
 public:
     int x;
-
     Number(int val) {
         x = val;
     }
