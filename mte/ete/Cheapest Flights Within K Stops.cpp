@@ -24,6 +24,7 @@ int findCheapestPrice(int n, vector<vector<int>>& flights,int src,int dst, int k
         int price = pq.top().first;
         int node = pq.top().second.first;
         int stop = pq.top().second.second;
+        pq.pop();
 
         if(stop > k) continue;
 
