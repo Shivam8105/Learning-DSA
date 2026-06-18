@@ -30,7 +30,7 @@ vector<vector<int>> floodFill(vector<vector<int>>& image,int sr, int sc, int col
 
             if(nx >= 0 && nx < n && ny >= 0 && ny < m && image[nx][ny] == original){
                 image[nx][ny] = color;
-                q.push({sr,sc});
+                q.push({nx,ny});
             }
         }
     }
