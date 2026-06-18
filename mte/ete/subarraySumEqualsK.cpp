@@ -1,6 +1,27 @@
 #include <iostream>
 using namespace std;
 
+ int subarraySum(vector<int>& nums, int k) {
+
+        unordered_map<int,int> mp;
+
+        mp[0] = 1;
+
+        int sum = 0;
+        int count = 0;
+
+        for(int x : nums) {
+
+            sum += x;
+
+            count += mp[sum - k];
+
+            mp[sum]++;
+        }
+
+        return count;
+    }
+
 int main(){
     int n;
     cin >> n;
@@ -9,7 +30,7 @@ int main(){
     for(int i = 0; i < n; i++){
         cin >> arr[i];
     }
-    
+
     int k;
     cin >> k;
 
