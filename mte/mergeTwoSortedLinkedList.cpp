@@ -29,7 +29,6 @@ Node* mergeWithDummy(Node* l1, Node* l2) {
 
     if(l1) temp->next = l1;
     else temp->next = l2;
-
     return dummy->next;
 }
 
